@@ -17,15 +17,15 @@ const variants = {
 }
 
 const sizes = {
-  sm: "py-2 px-5",
-  md: "p-4",
+  sm: "py-3 px-5 font-sm",
+  md: "p-4 font-lg",
 }
 
 const Button = (props: Props) => {
   const { variant = "solid", size = "md", href, target, ...rest } = props
 
   const className = twMerge(
-    "rounded-xl w-fit transition-all",
+    "rounded-xl w-fit h-fit transition-all",
     variants[variant],
     sizes[size]
   )
