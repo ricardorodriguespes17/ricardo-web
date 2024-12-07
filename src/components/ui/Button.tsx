@@ -10,10 +10,11 @@ type Props = {
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 const variants = {
-  solid: "bg-dark-100 text-white hover:bg-dark-90",
+  solid:
+    "bg-dark-100 text-white hover:bg-dark-90 dark:bg-green-dark dark:text-dark-90 hover:bg-green-light",
   outlined:
-    "border border-dark-100 text-dark-100 bg-transparent hover:bg-dark-90 hover:text-white",
-  plain: "text-dark-100 bg-transparent hover:font-bold",
+    "border border-dark-100 text-dark-100 bg-transparent text-inhreit hover:bg-dark-90 hover:text-white",
+  plain: "text-dark-100 bg-transparent text-inhreit",
 }
 
 const sizes = {
@@ -25,7 +26,7 @@ const Button = (props: Props) => {
   const { variant = "solid", size = "md", href, target, ...rest } = props
 
   const className = twMerge(
-    "rounded-xl w-fit h-fit transition-all",
+    "rounded-xl w-fit h-fit transition-all font-semibold hover:font-bold",
     variants[variant],
     sizes[size]
   )
