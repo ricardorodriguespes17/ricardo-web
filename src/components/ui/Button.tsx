@@ -11,7 +11,7 @@ type Props = {
 
 const variants = {
   solid:
-    "bg-dark-100 text-white hover:bg-dark-90 dark:bg-green-dark dark:text-dark-90 hover:bg-green-light",
+    "bg-dark-100 text-white hover:bg-dark-90 dark:bg-green-dark dark:text-dark-90 dark:hover:bg-green-light hover:bg-dark-90",
   outlined:
     "border border-dark-100 text-dark-100 bg-transparent text-inhreit hover:bg-dark-90 hover:text-white",
   plain: "text-dark-100 bg-transparent text-inhreit",
