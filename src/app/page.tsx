@@ -2,6 +2,7 @@ import Footer from "@/components/layout/Footer"
 import Header from "@/components/layout/Header"
 import AboutSession from "@/components/sessions/AboutSession"
 import CareerSession from "@/components/sessions/CareerSession"
+import PortifolioSession from "@/components/sessions/PortifolioSession"
 import PresentationSession from "@/components/sessions/PresentationSession"
 import SkillsSession from "@/components/sessions/SkillsSession"
 
@@ -15,6 +16,7 @@ const HomePage = () => {
         <AboutSession />
         <CareerSession />
         <SkillsSession />
+        <PortifolioSession />
       </main>
 
       <Footer />
