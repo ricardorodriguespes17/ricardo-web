@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge"
 
 type Props = {
   variant?: "solid" | "outlined" | "plain"
-  size?: "xs" | "sm" | "md"
+  size?: "xs" | "sm" | "md" | "full"
   href?: string
   target?: HTMLAttributeAnchorTarget
 } & ButtonHTMLAttributes<HTMLButtonElement>
@@ -22,9 +22,10 @@ const variants = {
 }
 
 const sizes = {
-  xs: "p-2 font-sm",
-  sm: "p-3 font-sm",
-  md: "p-4 font-lg",
+  xs: "p-2 gap-2 font-sm",
+  sm: "p-3 gap-3 font-sm",
+  md: "p-4 gap-4 font-lg",
+  full: "p-4 justify-between font-lg w-full",
 }
 
 const Button = (props: Props) => {
@@ -39,7 +40,7 @@ const Button = (props: Props) => {
 
   const className = twMerge(
     "border border-transparent rounded-xl w-fit h-fit transition-all",
-    "font-semibold hover:font-bold",
+    "font-semibold hover:font-bold flex items-center justify-center",
     variants[variant],
     sizes[size],
     baseClassName
