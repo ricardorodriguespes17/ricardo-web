@@ -5,6 +5,7 @@
 body {
   @apply w-screen h-screen flex flex-col bg-gray-10 text-dark-100;
   @apply dark:bg-dark-90 dark:text-green-dark;
+  @apply overflow-x-hidden;
 }
 
 h1 {
@@ -21,4 +22,17 @@ h3 {
 
 h4 {
   @apply text-xl font-semibold;
+}
+
+@layer utilities {
+  .mask-blob {
+    mask-image: url("../assets/blob.svg");
+    -webkit-mask-image: url("../assets/blob.svg");
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: 50% 80%;
+    -webkit-mask-position: 50% 80%;
+    mask-size: 120%;
+    -webkit-mask-size: 120%;
+  }
 }
