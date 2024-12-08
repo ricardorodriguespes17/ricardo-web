@@ -14,7 +14,7 @@ const variants = {
     "bg-dark-100 text-white hover:bg-dark-90 dark:bg-green-dark dark:text-dark-90 dark:hover:bg-green-light hover:bg-dark-90",
   outlined:
     "border border-dark-100 text-dark-100 bg-transparent text-inhreit hover:bg-dark-90 hover:text-white",
-  plain: "text-dark-100 bg-transparent text-inhreit",
+  plain: "text-dark-100 bg-transparent text-inhreit hover:opacity-85",
 }
 
 const sizes = {
@@ -23,12 +23,20 @@ const sizes = {
 }
 
 const Button = (props: Props) => {
-  const { variant = "solid", size = "md", href, target, ...rest } = props
+  const {
+    variant = "solid",
+    size = "md",
+    href,
+    target,
+    className: baseClassName,
+    ...rest
+  } = props
 
   const className = twMerge(
     "rounded-xl w-fit h-fit transition-all font-semibold hover:font-bold",
     variants[variant],
-    sizes[size]
+    sizes[size],
+    baseClassName
   )
 
   if (href) {
