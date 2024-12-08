@@ -17,13 +17,13 @@ const PortifolioSession = () => {
 
         <div className="flex flex-col w-[350px]">
           <h4>Ricardo Rodrigues</h4>
-          <p className="text-sm text-gray-80">
+          <p className="text-sm text-gray-80 dark:text-gray-30">
             Software Developer | React | Node | Java - Undergraduate in Computer
             Science at UESB.
           </p>
         </div>
 
-        <div className="flex flex-col text-sm text-gray-80">
+        <div className="flex flex-col text-sm text-gray-80  dark:text-gray-30">
           <label>40 repositórios públicos</label>
         </div>
       </div>

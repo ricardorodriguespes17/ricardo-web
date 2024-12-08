@@ -15,7 +15,7 @@ export default {
           dark: "#61C698",
         },
         gray: {
-          10: "##f0f0f4",
+          10: "#f0f0f4",
           20: "#EEEEEE",
           30: "#E3E3E3",
           50: "#A9A9A9",

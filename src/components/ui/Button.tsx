@@ -18,7 +18,7 @@ const variants = {
     "border-dark-100 dark:border-green-light text-dark-100 bg-transparent text-inhreit",
     "hover:bg-dark-90 dark:hover:bg-green-light hover:text-white dark:hover:text-dark-100"
   ),
-  plain: "text-dark-100 bg-transparent text-inhreit hover:opacity-85",
+  plain: "text-dark-100 bg-transparent text-inhreit hover:text-green-dark",
 }
 
 const sizes = {
@@ -40,7 +40,7 @@ const Button = (props: Props) => {
 
   const className = twMerge(
     "border border-transparent rounded-xl w-fit h-fit transition-all",
-    "font-semibold hover:font-bold flex items-center justify-center",
+    "font-semibold flex items-center justify-center",
     variants[variant],
     sizes[size],
     baseClassName
