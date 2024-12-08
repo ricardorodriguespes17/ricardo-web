@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge"
 
 type Props = {
   variant?: "solid" | "outlined" | "plain"
-  size?: "sm" | "md"
+  size?: "xs" | "sm" | "md"
   href?: string
   target?: HTMLAttributeAnchorTarget
 } & ButtonHTMLAttributes<HTMLButtonElement>
@@ -22,7 +22,8 @@ const variants = {
 }
 
 const sizes = {
-  sm: "py-3 px-5 font-sm",
+  xs: "p-2 font-sm",
+  sm: "p-3 font-sm",
   md: "p-4 font-lg",
 }
 
