@@ -11,8 +11,8 @@ export default {
     extend: {
       colors: {
         green: {
-          dark: "#55e5a4",
-          light: "#61C698",
+          light: "#55e5a4",
+          dark: "#61C698",
         },
         gray: {
           10: "##f0f0f4",

@@ -10,7 +10,7 @@ const PresentationSession = () => {
       <div className="flex">
         <div className="flex flex-1 flex-col justify-center gap-6">
           <div className="flex flex-col gap-1">
-            <h1>Ricardo Rodrigues</h1>
+            <h1 className="dark:text-green-dark">Ricardo Rodrigues</h1>
             <p className="text-gray-80 dark:text-green-light">
               Desenvolvedor Fullstack
             </p>
@@ -35,7 +35,7 @@ const PresentationSession = () => {
 
           <Button
             href="#contato"
-            className="hover:bg-green-dark hover:text-dark-100"
+            className="hover:bg-green-light hover:text-dark-100"
           >
             Entre em contato
           </Button>
