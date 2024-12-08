@@ -17,7 +17,7 @@ const AboutSession = () => {
     <BaseSession>
       <div className="flex w-full gap-20">
         <div className="w-[500px] flex-1 relative">
-          <div className="bg-dark-90 w-[95%] h-[90%] absolute z-[1]" />
+          <div className="bg-dark-90 dark:bg-green-dark w-[95%] h-[90%] absolute z-[1]" />
 
           <Image
             src={AboutImg}
@@ -32,7 +32,7 @@ const AboutSession = () => {
           <div className="flex flex-col gap-2 h-full">
             <p>
               Tenho {age} anos, moro em Vitória da Conquista, na Bahia. Estou
-              cursando Ciência da Computação na UESB
+              finalizando o curso de Ciência da Computação na UESB.
             </p>
             <p>
               Estou em busca de novos desafios na área da programação,
