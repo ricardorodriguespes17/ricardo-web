@@ -16,6 +16,7 @@ const Header = () => {
     }
 
     window.addEventListener("scroll", handleScroll)
+    handleScroll()
 
     return () => {
       window.removeEventListener("scroll", handleScroll)
@@ -26,7 +27,7 @@ const Header = () => {
     <header
       className={twMerge(
         "min-h-[70px] w-full flex items-center px-[3%] justify-end fixed",
-        "top-0 z-10 bg-white dark:bg-dark-90 transition-transform duration-500",
+        "top-0 z-10 bg-gray-10 dark:bg-dark-90 transition-transform duration-500",
         hidden ? "-translate-y-full" : "translate-y-0"
       )}
     >
