@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { BsArrowBarDown, BsFillPersonLinesFill } from "react-icons/bs"
 import Button from "../ui/Button"
 import { twMerge } from "tailwind-merge"
@@ -27,8 +27,38 @@ const icons = {
   softs: <BsFillPersonLinesFill />,
 }
 
+const openTimes = {
+  frontend: 100,
+  backend: 1000,
+  softs: 1900,
+}
+
 const SkillsList = ({ type }: Props) => {
   const [isOpen, setIsOpen] = useState(false)
+  const [firstOpen, setFirstOpen] = useState(false)
+
+  useEffect(() => {
+    if (firstOpen) {
+      setTimeout(() => {
+        setIsOpen(true)
+      }, openTimes[type])
+    }
+  }, [firstOpen])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      if (currentScrollY > 1500) {
+        setFirstOpen(true)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
     <div className="flex flex-col bg-gray-30 dark:bg-dark-100 rounded-lg px-4 h-fit">
