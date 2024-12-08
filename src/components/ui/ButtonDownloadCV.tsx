@@ -1,3 +1,4 @@
+import { TbExternalLink } from "react-icons/tb"
 import Button from "./Button"
 
 const ButtonDownloadCV = () => {
@@ -7,7 +8,7 @@ const ButtonDownloadCV = () => {
       size="sm"
       href="https://drive.google.com/file/d/1i444nZKAnfqXwPtdnMmU_XDmw5RGKhsY/view?usp=sharing"
     >
-      Baixar currículo
+      Abrir currículo <TbExternalLink size={24} />
     </Button>
   )
 }
