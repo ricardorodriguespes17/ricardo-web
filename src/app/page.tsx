@@ -1,5 +1,6 @@
 import Footer from "@/components/layout/Footer"
 import Header from "@/components/layout/Header"
+import AboutSession from "@/components/sessions/AboutSession"
 import PresentationSession from "@/components/sessions/PresentationSession"
 
 const HomePage = () => {
@@ -9,6 +10,7 @@ const HomePage = () => {
 
       <main>
         <PresentationSession />
+        <AboutSession />
       </main>
 
       <Footer />
