@@ -22,10 +22,10 @@ const variants = {
 }
 
 const sizes = {
-  xs: "p-2 gap-2 font-sm",
-  sm: "p-3 gap-3 font-sm",
-  md: "p-4 gap-4 font-lg",
-  full: "p-4 justify-between font-lg w-full",
+  xs: "p-2 gap-1 text-xs",
+  sm: "p-3 gap-2 text-sm",
+  md: "p-4 gap-4 text-lg",
+  full: "p-4 justify-between text-lg w-full",
 }
 
 const Button = (props: Props) => {
@@ -33,7 +33,7 @@ const Button = (props: Props) => {
     variant = "solid",
     size = "md",
     href,
-    target,
+    target = "_blank",
     className: baseClassName,
     ...rest
   } = props

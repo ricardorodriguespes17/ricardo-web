@@ -5,6 +5,7 @@ import CareerSession from "@/components/sessions/CareerSession"
 import PortifolioSession from "@/components/sessions/PortifolioSession"
 import PresentationSession from "@/components/sessions/PresentationSession"
 import SkillsSession from "@/components/sessions/SkillsSession"
+import ToolsSession from "@/components/sessions/ToolsSession"
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
         <CareerSession />
         <SkillsSession />
         <PortifolioSession />
+        <ToolsSession />
       </main>
 
       <Footer />
