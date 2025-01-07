@@ -2,22 +2,28 @@
 
 import { useState } from "react"
 import Button from "../ui/Button"
+import useCareer from "@/store/careerStore"
 
-const options = ["Acadêmica", "Cursos", "Eventos", "Profissional"]
+const options: { id: CareerTypes; name: string }[] = [
+  { id: "academic", name: "Acadêmica" },
+  { id: "course", name: "Cursos" },
+  { id: "event", name: "Eventos" },
+  { id: "professional", name: "Profissional" },
+]
 
 const CareerOptions = () => {
-  const [selected, setSelected] = useState(0)
+  const { setTypeSelected, typeSelected } = useCareer()
 
   return (
     <div className="flex gap-1">
       {options.map((item, index) => (
         <Button
           key={index}
-          variant={selected === index ? "solid" : "outlined"}
+          variant={item.id === typeSelected ? "solid" : "outlined"}
           size="xs"
-          onClick={() => setSelected(index)}
+          onClick={() => setTypeSelected(item.id)}
         >
-          {item}
+          {item.name}
         </Button>
       ))}
     </div>
