@@ -4,6 +4,7 @@ type CareerType = {
   period: string
   type: CareerTypes
   company?: string
+  companyLogo?: string
 }
 
 type CareerTypes = "academic" | "course" | "event" | "professional"
