@@ -4,38 +4,38 @@ import { useEffect, useState } from "react"
 import { BsArrowBarDown, BsFillPersonLinesFill } from "react-icons/bs"
 import Button from "../ui/Button"
 import { twMerge } from "tailwind-merge"
-import Image from "next/image"
-import ReactIcon from "@/assets/icons/react.svg"
 import { CgDatabase } from "react-icons/cg"
 import { TbDeviceDesktopCode } from "react-icons/tb"
-
-type SkillTypes = "frontend" | "backend" | "softs"
+import useSkills from "@/store/skillsStore"
+import { SkillTypes } from "@/@types/SkillType"
+import SkillsItemHeader from "./SkillsItemHeader"
 
 type Props = {
   type: SkillTypes
 }
 
-const titles = {
+const titles: Record<SkillTypes, string> = {
   frontend: "Frontend",
   backend: "Backend",
-  softs: "Interpessoal",
+  interpersonal: "Interpessoal",
 }
 
-const icons = {
+const icons: Record<SkillTypes, React.ReactNode> = {
   frontend: <TbDeviceDesktopCode />,
   backend: <CgDatabase />,
-  softs: <BsFillPersonLinesFill />,
+  interpersonal: <BsFillPersonLinesFill />,
 }
 
-const openTimes = {
+const openTimes: Record<SkillTypes, number> = {
   frontend: 100,
   backend: 1000,
-  softs: 1900,
+  interpersonal: 1900,
 }
 
 const SkillsList = ({ type }: Props) => {
   const [isOpen, setIsOpen] = useState(false)
   const [firstOpen, setFirstOpen] = useState(false)
+  const { skills } = useSkills()
 
   useEffect(() => {
     if (firstOpen) {
@@ -48,8 +48,10 @@ const SkillsList = ({ type }: Props) => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
-      if (currentScrollY > 1500) {
+      if (currentScrollY > 1200) {
         setFirstOpen(true)
+      } else {
+        setFirstOpen(false)
       }
     }
 
@@ -63,20 +65,12 @@ const SkillsList = ({ type }: Props) => {
   return (
     <div className="flex flex-col bg-gray-30 dark:bg-dark-100 rounded-lg px-4 h-fit">
       <div className="w-full flex items-center gap-2 justify-between">
-        <Button
-          variant="plain"
-          size="full"
-          onClick={() => setIsOpen((value) => !value)}
-        >
-          <span className="text-xl">{icons[type]}</span>
-          <h3>{titles[type]}</h3>
-          <BsArrowBarDown
-            className={twMerge(
-              "transition-transform duration-700 text-xl",
-              isOpen ? "rotate-180" : "rotate-0"
-            )}
-          />
-        </Button>
+        <SkillsItemHeader
+          isOpen={isOpen}
+          icon={icons[type]}
+          title={titles[type]}
+          setOpen={() => setIsOpen((value) => !value)}
+        />
       </div>
 
       <div
@@ -85,22 +79,13 @@ const SkillsList = ({ type }: Props) => {
           isOpen ? "max-h-[300px] pb-4" : "max-h-0"
         )}
       >
-        <div className="flex items-center gap-1 font-bold">
-          <Image src={ReactIcon} alt="Icone do React" className="w-8" />
-          <label>React</label>
-        </div>
-        <div className="flex items-center gap-1 font-bold">
-          <Image src={ReactIcon} alt="Icone do React" className="w-8" />
-          <label>React</label>
-        </div>
-        <div className="flex items-center gap-1 font-bold">
-          <Image src={ReactIcon} alt="Icone do React" className="w-8" />
-          <label>React</label>
-        </div>
-        <div className="flex items-center gap-1 font-bold">
-          <Image src={ReactIcon} alt="Icone do React" className="w-8" />
-          <label>React</label>
-        </div>
+        {skills
+          .filter((item) => item.type === type)
+          .map((skill, index) => (
+            <div key={index} className="flex items-center gap-1 font-bold">
+              <label>{skill.label}</label>
+            </div>
+          ))}
       </div>
     </div>
   )
