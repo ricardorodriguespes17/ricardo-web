@@ -17,6 +17,7 @@ const CareerItems = () => {
     >
       {careers
         .filter((item) => item.type === typeSelected)
+        .sort((a, b) => a.position - b.position)
         .map((item, index) => (
           <div
             key={index}

@@ -11,7 +11,7 @@ type Actions = {
 }
 
 const useCareer = create<State & Actions>()((set, get) => ({
-  typeSelected: "academic",
+  typeSelected: "professional",
   careers: [
     {
       title: "Técnico em Informática",
@@ -19,6 +19,7 @@ const useCareer = create<State & Actions>()((set, get) => ({
       type: "academic",
       company: "IFNMG",
       companyLogo: "ifnmg.png",
+      position: 1,
     },
     {
       title: "Bacharelado em Ciência da Computação",
@@ -26,6 +27,7 @@ const useCareer = create<State & Actions>()((set, get) => ({
       type: "academic",
       company: "UESB",
       companyLogo: "uesb.png",
+      position: 0,
     },
     {
       title: "Desenvolvedor Fullstack",
@@ -33,6 +35,7 @@ const useCareer = create<State & Actions>()((set, get) => ({
       type: "professional",
       company: "Mercadótica Franquias",
       companyLogo: "mercadotica.jpg",
+      position: 4,
     },
     {
       title: "Desenvolvedor Frontend",
@@ -40,6 +43,7 @@ const useCareer = create<State & Actions>()((set, get) => ({
       type: "professional",
       company: "FWC Tecnologia",
       companyLogo: "fwc.jpg",
+      position: 3,
     },
     {
       title: "Desenvolvedor Frontend",
@@ -47,6 +51,7 @@ const useCareer = create<State & Actions>()((set, get) => ({
       type: "professional",
       company: "Órulo",
       companyLogo: "orulo.jpg",
+      position: 2,
     },
     {
       title: "Desenvolvedor Frontend",
@@ -54,37 +59,39 @@ const useCareer = create<State & Actions>()((set, get) => ({
       type: "professional",
       company: "Vetta Tecnologia",
       companyLogo: "vetta.jpg",
+      position: 1,
     },
     {
-      title: "Desenvolvedor Freelancer Fullstack",
-      period: "set 2022 até hoje",
-      type: "professional",
-    },
-    {
-      title: "Campus Party BA",
+      title: "Campus Party BA - Salvador",
       period: "2018",
       type: "event",
       companyLogo: "campus-party.png",
+      company: "Campus Party",
+      position: 3,
     },
     {
-      title: "Semana da Computação - UESB",
+      title: "SECOMP - UESB",
       period: "2018",
       company: "UESB",
       type: "event",
       companyLogo: "secomp.png",
+      position: 2,
     },
     {
-      title: "Semana da Computação - UESB",
+      title: "SECOMP - UESB",
       period: "2019",
       company: "UESB",
       type: "event",
       companyLogo: "secomp.png",
+      position: 1,
     },
     {
-      title: "Campus Party BR",
+      title: "Campus Party BR - São Paulo",
       period: "2023",
       type: "event",
+      company: "Campus Party",
       companyLogo: "campus-party.png",
+      position: 0,
     },
     {
       title: "Introdução a Javascript",
@@ -92,6 +99,7 @@ const useCareer = create<State & Actions>()((set, get) => ({
       company: "Udemy",
       type: "course",
       companyLogo: "udemy.png",
+      position: 3,
     },
     {
       title: "Introdução ao Python",
@@ -99,6 +107,7 @@ const useCareer = create<State & Actions>()((set, get) => ({
       company: "Udemy",
       type: "course",
       companyLogo: "udemy.png",
+      position: 2,
     },
     {
       title: "React Native",
@@ -106,6 +115,7 @@ const useCareer = create<State & Actions>()((set, get) => ({
       company: "Udemy",
       type: "course",
       companyLogo: "udemy.png",
+      position: 2,
     },
     {
       title: "Semana Omnistack",
@@ -113,6 +123,7 @@ const useCareer = create<State & Actions>()((set, get) => ({
       company: "Rockeatseat",
       type: "course",
       companyLogo: "rockeatseat.png",
+      position: 1,
     },
     {
       title: "Design Patterns",
@@ -120,6 +131,15 @@ const useCareer = create<State & Actions>()((set, get) => ({
       company: "Udemy",
       type: "course",
       companyLogo: "udemy.png",
+      position: 0,
+    },
+    {
+      title: "Desenvolvedor Frontend",
+      period: "out 2023 até hoje",
+      company: "King House",
+      type: "professional",
+      companyLogo: "king-house.png",
+      position: 0,
     },
   ],
   setCareers: (careers) => set({ careers }),

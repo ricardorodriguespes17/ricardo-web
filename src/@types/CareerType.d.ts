@@ -5,6 +5,7 @@ type CareerType = {
   type: CareerTypes
   company?: string
   companyLogo?: string
+  position: number
 }
 
 type CareerTypes = "academic" | "course" | "event" | "professional"

@@ -1,14 +1,13 @@
 "use client"
 
-import { useState } from "react"
 import Button from "../ui/Button"
 import useCareer from "@/store/careerStore"
 
 const options: { id: CareerTypes; name: string }[] = [
+  { id: "professional", name: "Profissional" },
   { id: "academic", name: "Acadêmica" },
   { id: "course", name: "Cursos" },
   { id: "event", name: "Eventos" },
-  { id: "professional", name: "Profissional" },
 ]
 
 const CareerOptions = () => {
