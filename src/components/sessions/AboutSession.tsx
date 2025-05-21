@@ -1,7 +1,6 @@
 import Image from "next/image"
 import BaseSession from "../layout/BaseSession"
 import AboutImg from "@/assets/about.jpg"
-import Button from "../ui/Button"
 import ButtonDownloadCV from "../ui/ButtonDownloadCV"
 
 const calculateAge = () => {
@@ -14,7 +13,7 @@ const AboutSession = () => {
   const age = calculateAge()
 
   return (
-    <BaseSession>
+    <BaseSession id="about">
       <div className="flex w-full gap-20">
         <div className="w-[500px] flex-1 relative">
           <div className="bg-dark-90 dark:bg-green-dark w-[95%] h-[90%] absolute z-[1]" />

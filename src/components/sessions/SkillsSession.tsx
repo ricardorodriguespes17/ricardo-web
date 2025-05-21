@@ -3,7 +3,7 @@ import BaseSession from "../layout/BaseSession"
 
 const SkillsSession = () => {
   return (
-    <BaseSession>
+    <BaseSession id="skills">
       <h2 className="mb-4">Habilidades</h2>
 
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -7,6 +7,14 @@ import { twMerge } from "tailwind-merge"
 import ButtonDownloadCV from "../ui/ButtonDownloadCV"
 import { IoIosMenu } from "react-icons/io"
 
+const headerLinks = [
+  { label: "Sobre", link: "about" },
+  { label: "Carreira", link: "career" },
+  { label: "Habilidades", link: "skills" },
+  { label: "Portifolio", link: "portifolio" },
+  { label: "Contato", link: "contact" },
+]
+
 const Header = () => {
   const [hidden, setHidden] = useState(false)
 
@@ -37,21 +45,17 @@ const Header = () => {
       </Button>
 
       <div className="hidden md:flex items-center gap-1">
-        <Button size="sm" variant="plain">
-          Sobre
-        </Button>
-        <Button size="sm" variant="plain">
-          Carreira
-        </Button>
-        <Button size="sm" variant="plain">
-          Habilidades
-        </Button>
-        <Button size="sm" variant="plain">
-          Projetos
-        </Button>
-        <Button size="sm" variant="plain">
-          Contato
-        </Button>
+        {headerLinks.map((item, index) => (
+          <Button
+            key={index}
+            href={`#${item.link}`}
+            target="_self"
+            size="sm"
+            variant="plain"
+          >
+            {item.label}
+          </Button>
+        ))}
         <ButtonTheme />
         <ButtonDownloadCV />
       </div>

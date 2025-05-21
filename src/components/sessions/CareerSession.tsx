@@ -4,7 +4,7 @@ import BaseSession from "../layout/BaseSession"
 
 const CareerSession = () => {
   return (
-    <BaseSession>
+    <BaseSession id="career">
       <h2 className="mb-4">Carreira</h2>
       <CareerOptions />
       <CareerItems />

@@ -14,7 +14,10 @@ const Footer = () => {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="w-full flex flex-col items-center bg-dark-90 dark:bg-dark-100 text-white px-4">
+    <footer
+      id="contact"
+      className="w-full flex flex-col items-center bg-dark-90 dark:bg-dark-100 text-white px-4"
+    >
       <div className="flex flex-col max-w-full items-center gap-10 py-5">
         <p className="w-[600px] max-w-full text-center text-sm">
           Sinta-se à vontade para entrar em contato comigo se estiver procurando
