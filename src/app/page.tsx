@@ -6,10 +6,11 @@ import PortifolioSession from "@/components/sessions/PortifolioSession"
 import PresentationSession from "@/components/sessions/PresentationSession"
 import SkillsSession from "@/components/sessions/SkillsSession"
 import ToolsSession from "@/components/sessions/ToolsSession"
+import FloatingButton from "@/components/ui/FloatingButton"
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col gap-4 w-full h-full">
+    <div className="flex flex-col gap-4 w-full h-full relative">
       <Header />
 
       <main>
@@ -22,6 +23,8 @@ const HomePage = () => {
       </main>
 
       <Footer />
+
+      <FloatingButton />
     </div>
   )
 }
