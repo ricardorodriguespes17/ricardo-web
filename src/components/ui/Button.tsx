@@ -11,14 +11,14 @@ type Props = {
 
 const variants = {
   solid: twMerge(
-    "bg-dark-100 text-white hover:bg-dark-90 dark:bg-green-dark",
-    "dark:text-dark-90 dark:hover:bg-green-light hover:bg-dark-90"
+    "bg-dark-100 text-white hover:bg-dark-90 dark:bg-blue-dark",
+    "dark:text-dark-90 dark:hover:bg-blue-light hover:bg-dark-90"
   ),
   outlined: twMerge(
-    "border-dark-100 dark:border-green-light text-dark-100 bg-transparent text-inhreit",
-    "hover:bg-dark-90 dark:hover:bg-green-light hover:text-white dark:hover:text-dark-100"
+    "border-dark-100 dark:border-blue-light text-dark-100 bg-transparent text-inhreit",
+    "hover:bg-dark-90 dark:hover:bg-blue-light hover:text-white dark:hover:text-dark-100"
   ),
-  plain: "text-dark-100 bg-transparent text-inhreit hover:text-green-dark",
+  plain: "text-dark-100 bg-transparent text-inhreit hover:text-blue-dark",
 }
 
 const sizes = {

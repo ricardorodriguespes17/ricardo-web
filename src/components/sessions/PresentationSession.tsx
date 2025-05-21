@@ -9,8 +9,8 @@ const PresentationSession = () => {
       <div className="flex flex-col-reverse md:flex-row items-center h-fit w-full">
         <div className="flex flex-1 flex-col justify-center items-center md:items-start gap-3 md:gap-6">
           <div className="flex flex-col gap-1 items-center md:items-start">
-            <h1 className="dark:text-green-dark">Ricardo Rodrigues</h1>
-            <p className="text-gray-80 dark:text-green-light">
+            <h1 className="dark:text-blue-dark">Ricardo Rodrigues</h1>
+            <p className="text-gray-80 dark:text-blue-light">
               Desenvolvedor Fullstack
             </p>
           </div>
@@ -34,7 +34,7 @@ const PresentationSession = () => {
 
           <Button
             href="#contato"
-            className="hover:bg-green-light hover:text-dark-100"
+            className="hover:bg-blue-light hover:text-dark-100"
           >
             Entre em contato
           </Button>

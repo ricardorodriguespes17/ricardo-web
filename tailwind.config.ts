@@ -14,6 +14,10 @@ export default {
           light: "#55e5a4",
           dark: "#61C698",
         },
+        blue: {
+          light: "#52EBF3",
+          dark: "#00CFD1",
+        },
         gray: {
           10: "#f0f0f4",
           20: "#EEEEEE",
@@ -24,8 +28,8 @@ export default {
           100: "#8C8C8C",
         },
         dark: {
-          90: "#26313F",
-          100: "#151C25",
+          90: "#011421",
+          100: "#021529",
         },
       },
     },

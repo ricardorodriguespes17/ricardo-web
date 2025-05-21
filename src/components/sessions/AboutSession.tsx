@@ -16,7 +16,7 @@ const AboutSession = () => {
     <BaseSession id="about">
       <div className="flex w-full gap-20">
         <div className="w-[500px] flex-1 relative">
-          <div className="bg-dark-90 dark:bg-green-dark w-[95%] h-[90%] absolute z-[1]" />
+          <div className="bg-dark-90 dark:bg-blue-dark w-[95%] h-[90%] absolute z-[1]" />
 
           <Image
             src={AboutImg}

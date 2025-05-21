@@ -46,9 +46,9 @@ h4 {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-dark-90/30 dark:bg-green-dark/30 rounded-[10px];
+  @apply bg-dark-90/30 dark:bg-blue-dark/30 rounded-[10px];
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-dark-100 dark:bg-green-light;
+  @apply bg-dark-100 dark:bg-blue-light;
 }
