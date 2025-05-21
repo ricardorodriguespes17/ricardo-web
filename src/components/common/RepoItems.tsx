@@ -1,19 +1,23 @@
-"use client"
+import { RepositoryType } from "@/@types/RepositoryType"
 
-const RepoItems = () => {
-  const repos = new Array(8)
-    .fill("Reposotório")
-    .map((item, index) => `${item} ${index + 1}`)
+type Props = {
+  repositories: RepositoryType[]
+}
 
+const RepoItems = (props: Props) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-4 max-h-[300px] overflow-auto">
-      {repos.map((item, index) => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-4">
+      {props.repositories.slice(0, 8).map((repo, index) => (
         <div
           key={index}
-          className="flex h-fit flex-col gap-1 py-4 px-6 rounded-lg bg-gray-30 dark:bg-dark-100"
+          className="flex max-h-[200px] flex-col gap-1 py-4 px-6 rounded-lg bg-gray-30 dark:bg-dark-100"
         >
-          <h4>{item}</h4>
-          <p className="text-sm text-gray-80 dark:text-gray-50">Descrição</p>
+          <a href={repo.html_url} target="_blank">
+            <h4>{repo.name}</h4>
+          </a>
+          <p className="text-sm text-gray-80 dark:text-gray-50">
+            {repo.description}
+          </p>
         </div>
       ))}
     </div>
