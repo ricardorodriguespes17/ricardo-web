@@ -23,7 +23,7 @@ const CareerItems = () => {
             key={index}
             className={twMerge(
               "flex min-h-max w-[300px] rounded-lg bg-gray-30 dark:bg-dark-100",
-              "p-4 gap-3"
+              "p-4 gap-3 flex-1 md:flex-none"
             )}
           >
             <CareerItemLogo companyLogo={item.companyLogo} />
