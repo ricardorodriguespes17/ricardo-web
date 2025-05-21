@@ -14,14 +14,14 @@ const AboutSession = () => {
 
   return (
     <BaseSession id="about">
-      <div className="flex w-full gap-20">
-        <div className="w-[500px] flex-1 relative">
-          <div className="bg-dark-90 dark:bg-blue-dark w-[95%] h-[90%] absolute z-[1]" />
+      <div className="flex w-full flex-col items-center lg:flex-row gap-20">
+        <div className="max-w-[400px] h-fit relative">
+          <div className="bg-dark-90 dark:bg-blue-dark w-full h-[95%] absolute z-[1]" />
 
           <Image
             src={AboutImg}
             alt="Foto de Ricardo Rodrigues com um moletom preto escrito Computação"
-            className="mt-4 ml-4 w-full relative z-[2]"
+            className="ml-4 mt-4 w-full relative z-[2]"
           />
         </div>
 
