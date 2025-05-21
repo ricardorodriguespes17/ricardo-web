@@ -1,3 +1,4 @@
+import Drawer from "@/components/layout/Drawer"
 import Footer from "@/components/layout/Footer"
 import Header from "@/components/layout/Header"
 import AboutSession from "@/components/sessions/AboutSession"
@@ -12,6 +13,7 @@ const HomePage = () => {
   return (
     <div className="flex flex-col gap-4 w-full h-full relative">
       <Header />
+      <Drawer />
 
       <main>
         <PresentationSession />

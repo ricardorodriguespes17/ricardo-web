@@ -1,17 +1,15 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import { headerLinks } from "@/config/headerConfig"
+import { useEffect, useState } from "react"
+import { twMerge } from "tailwind-merge"
 import Button from "../ui/Button"
 import ButtonTheme from "../ui/ButtonTheme"
-import { twMerge } from "tailwind-merge"
 import ButtonDownloadCV from "../ui/ButtonDownloadCV"
-import { headerLinks } from "@/config/headerConfig"
+import ButtonMenu from "../ui/ButtonMenu"
 
-type Props = {
-  children?: React.ReactNode
-}
-
-const Header = (props: Props) => {
+const Drawer = () => {
+  const [isOpen, setOpen] = useState(true)
   const [hidden, setHidden] = useState(false)
 
   useEffect(() => {
@@ -28,17 +26,24 @@ const Header = (props: Props) => {
     }
   }, [])
 
+  if (hidden && !isOpen) return <></>
+
   return (
-    <header
+    <div
       className={twMerge(
-        "min-h-[70px] w-full flex items-center px-1 md:px-[3%] justify-start md:justify-end md:fixed",
-        "top-0 z-10 bg-gray-10 dark:bg-dark-90 transition-transform duration-500 relative",
-        hidden ? "-translate-y-full" : "translate-y-0"
+        "flex flex-col p-4 gap-3 w-fit h-screen bg-white dark:bg-dark-90 fixed left-0 top-0",
+        "overflow-hidden md:invisible transition-colors z-20",
+        !isOpen && "bg-transparent"
       )}
     >
-      {props.children}
+      <ButtonMenu onClick={() => setOpen((value) => !value)} />
 
-      <div className="hidden md:flex items-center gap-1">
+      <div
+        className={twMerge(
+          "flex flex-col gap-3 flex-1 w-[300px] transition-all duration-500 overflow-hidden",
+          !isOpen && "w-0 opacity-0"
+        )}
+      >
         {headerLinks.map((item, index) => (
           <Button
             key={index}
@@ -50,11 +55,13 @@ const Header = (props: Props) => {
             {item.label}
           </Button>
         ))}
-        <ButtonTheme />
         <ButtonDownloadCV />
+        <div className="flex flex-1 items-end">
+          <ButtonTheme />
+        </div>
       </div>
-    </header>
+    </div>
   )
 }
 
-export default Header
+export default Drawer
