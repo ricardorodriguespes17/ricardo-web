@@ -26,7 +26,7 @@ const Footer = () => {
                 <ButtonCopy text={item.label as string} />
               </div>
             ))}
-          <div className="flex">
+          <div className="flex items-center">
             {contacts
               .filter((item) => item.link)
               .map((item, index) => (
@@ -35,6 +35,7 @@ const Footer = () => {
                   variant="plain"
                   href={item.link}
                   target="_blank"
+                  className="text-2xl"
                 >
                   <item.Icon />
                 </Button>
