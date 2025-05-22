@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "title": "",
+    "description": "",
+    "keywords": [
+      "Desenvolvedor",
+      "React",
+      "Frontend",
+      "Front-end",
+      "Javascript",
+      "Developer",
+      "Especialista",
+      "Next",
+      "React JS",
+      "Typescript",
+      "Tailwind",
+      "CSS",
+      "HTML",
+      "Sites",
+      "Fazer sites",
+      "Aplicativo"
+    ],
+    "openGraph": {
+      "title": "Ricardo Rodrigues | Desenvolvedor Frontend",
+      "description": "Site de apresentação de ${data.presentation.title}",
+      "type": "website",
+      "locale": "pt_BR",
+      "images": [
+        {
+          "url": "https://avatars.githubusercontent.com/u/39037180?v=4",
+          "width": 1200,
+          "height": 630,
+          "alt": "Ricardo Rodrigues"
+        }
+      ],
+      "countryName": "Brazil"
+    },
+    "icons": {
+      "icon": "/favicon.ico"
+    }
+  },
+  "header": {
+    "links": [
+      { "label": "Sobre", "link": "about" },
+      { "label": "Carreira", "link": "career" },
+      { "label": "Habilidades", "link": "skills" },
+      { "label": "Portifolio", "link": "portifolio" },
+      { "label": "Contato", "link": "contact" }
+    ],
+    "openCurriculumText": "Abrir currículo",
+    "curriculumLink": "https://drive.google.com/file/d/1i444nZKAnfqXwPtdnMmU_XDmw5RGKhsY/view?usp=sharing"
+  },
+  "presentation": {
+    "title": "Ricardo Rodrigues",
+    "subtitle": "Desenvolvedor Frontend",
+    "description": "Apaixonado por Javascript e desenvolvimento de aplicações. Gosto de solucionar problemas usando programação. Muito curioso, sempre estou rastreando as novas tecnologias na área.",
+    "location": "Vitória da Conquista / BA - Brasil",
+    "availabilityText": "Disponível para novos projetos",
+    "availability": true,
+    "contactButtonText": "Entre em contato"
+  },
+  "about": {
+    "title": "Um pouco sobre mim...",
+    "birthdate": "1999-05-28",
+    "location": "Vitória da Conquista, na Bahia",
+    "paragraphs": [
+      "Estou em busca de novos desafios na área da programação, contribuindo cada vez mais para o avanço da tecnologia da informação, pois acredito que isso tende a mudar cada vez mais o mundo para melhor."
+    ]
+  },
+  "career": {
+    "title": "Carreira",
+    "types": [
+      { "id": "professional", "name": "Profissional" },
+      { "id": "academic", "name": "Acadêmica" },
+      { "id": "course", "name": "Cursos" },
+      { "id": "event", "name": "Eventos" }
+    ],
+    "items": [
+      {
+        "title": "Técnico em Informática",
+        "period": "2014 a 2016",
+        "type": "academic",
+        "company": "IFNMG",
+        "companyLogo": "ifnmg.png",
+        "position": 1
+      },
+      {
+        "title": "Bacharelado em Ciência da Computação",
+        "period": "2017 a 2025",
+        "type": "academic",
+        "company": "UESB",
+        "companyLogo": "uesb.png",
+        "position": 0
+      },
+      {
+        "title": "Desenvolvedor Fullstack",
+        "period": "ago 2020 a ago 2021",
+        "type": "professional",
+        "company": "Mercadótica Franquias",
+        "companyLogo": "mercadotica.jpg",
+        "position": 4
+      },
+      {
+        "title": "Desenvolvedor Frontend",
+        "period": "ago 2021 a out 2021",
+        "type": "professional",
+        "company": "FWC Tecnologia",
+        "companyLogo": "fwc.jpg",
+        "position": 3
+      },
+      {
+        "title": "Desenvolvedor Frontend",
+        "period": "nov 2021 a mar 2022",
+        "type": "professional",
+        "company": "Órulo",
+        "companyLogo": "orulo.jpg",
+        "position": 2
+      },
+      {
+        "title": "Desenvolvedor Frontend",
+        "period": "mar 2022 a abr 2023",
+        "type": "professional",
+        "company": "Vetta Tecnologia",
+        "companyLogo": "vetta.jpg",
+        "position": 1
+      },
+      {
+        "title": "Campus Party BA - Salvador",
+        "period": "2018",
+        "type": "event",
+        "companyLogo": "campus-party.png",
+        "company": "Campus Party",
+        "position": 3
+      },
+      {
+        "title": "SECOMP - UESB",
+        "period": "2018",
+        "company": "UESB",
+        "type": "event",
+        "companyLogo": "secomp.png",
+        "position": 2
+      },
+      {
+        "title": "SECOMP - UESB",
+        "period": "2019",
+        "company": "UESB",
+        "type": "event",
+        "companyLogo": "secomp.png",
+        "position": 1
+      },
+      {
+        "title": "Campus Party BR - São Paulo",
+        "period": "2023",
+        "type": "event",
+        "company": "Campus Party",
+        "companyLogo": "campus-party.png",
+        "position": 0
+      },
+      {
+        "title": "Introdução a Javascript",
+        "period": "mai 2019",
+        "company": "Udemy",
+        "type": "course",
+        "companyLogo": "udemy.png",
+        "position": 3
+      },
+      {
+        "title": "Introdução ao Python",
+        "period": "mai 2019",
+        "company": "Udemy",
+        "type": "course",
+        "companyLogo": "udemy.png",
+        "position": 2
+      },
+      {
+        "title": "React Native",
+        "period": "mai 2019 a jun 2019",
+        "company": "Udemy",
+        "type": "course",
+        "companyLogo": "udemy.png",
+        "position": 2
+      },
+      {
+        "title": "Semana Omnistack",
+        "period": "mar 2020",
+        "company": "Rockeatseat",
+        "type": "course",
+        "companyLogo": "rockeatseat.png",
+        "position": 1
+      },
+      {
+        "title": "Design Patterns",
+        "period": "ago 2023",
+        "company": "Udemy",
+        "type": "course",
+        "companyLogo": "udemy.png",
+        "position": 0
+      },
+      {
+        "title": "Desenvolvedor Frontend",
+        "period": "out 2023 até hoje",
+        "company": "King House",
+        "type": "professional",
+        "companyLogo": "king-house.png",
+        "position": 0
+      }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades",
+    "itemsTitle": ["Frontend", "Backend", "Interpessoal"],
+    "items": [
+      { "label": "React JS", "logo": "react", "type": "frontend" },
+      { "label": "Next JS", "logo": "next", "type": "frontend" },
+      { "label": "Tailwind CSS", "logo": "tailwind", "type": "frontend" },
+      { "label": "Angular JS", "logo": "angular", "type": "frontend" },
+      { "label": "Zustand", "logo": "zustand", "type": "frontend" },
+      { "label": "Node JS", "logo": "node", "type": "backend" },
+      { "label": "Java", "logo": "java", "type": "backend" },
+      { "label": "Prisma", "logo": "prisma", "type": "backend" },
+      { "label": "Agentes de IA", "logo": "ia", "type": "backend" },
+      { "label": "Firebase", "logo": "firebase", "type": "backend" },
+      { "label": "Proatividade", "type": "interpersonal" },
+      { "label": "Confiança", "type": "interpersonal" },
+      { "label": "Criatividade", "type": "interpersonal" },
+      { "label": "Vesatilidade", "type": "interpersonal" },
+      { "label": "Facilidade de aprender", "type": "interpersonal" }
+    ]
+  },
+  "portifolio": {
+    "title": "Portifolio",
+    "githubUsername": "ricardorodriguespes17",
+    "repositoriesNumberText": "repositórios públicos",
+    "avatar": "https://avatars.githubusercontent.com/u/39037180?v=4"
+  },
+  "tools": {
+    "title": "Site feito com"
+  },
+  "contacts": {
+    "text": "Sinta-se à vontade para entrar em contato comigo se estiver procurando um desenvolvedor, tiver alguma dúvida ou simplesmente quiser se conectar.",
+    "items": [
+      { "label": "ricardor662@gmail.com", "icon": "MdOutlineMail" },
+      { "label": "+5577988792719", "icon": "FaWhatsapp" },
+      {
+        "link": "https://www.linkedin.com/in/ricardorodrigues17/",
+        "icon": "FaLinkedin"
+      },
+      {
+        "link": "https://www.instagram.com/ricardo_rodrigues17/",
+        "icon": "FaInstagram"
+      }
+    ],
+    "copyrightText": "Todos os direitos reservados."
+  }
+}

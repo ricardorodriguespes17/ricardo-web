@@ -9,7 +9,7 @@ import ButtonDownloadCV from "../ui/ButtonDownloadCV"
 import ButtonMenu from "../ui/ButtonMenu"
 
 const Drawer = () => {
-  const [isOpen, setOpen] = useState(true)
+  const [isOpen, setOpen] = useState(false)
   const [hidden, setHidden] = useState(false)
 
   useEffect(() => {
@@ -51,6 +51,7 @@ const Drawer = () => {
             target="_self"
             size="sm"
             variant="plain"
+            onClick={() => setOpen(false)}
           >
             {item.label}
           </Button>

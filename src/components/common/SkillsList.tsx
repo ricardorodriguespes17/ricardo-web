@@ -1,23 +1,22 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { BsArrowBarDown, BsFillPersonLinesFill } from "react-icons/bs"
-import Button from "../ui/Button"
+import { BsFillPersonLinesFill } from "react-icons/bs"
 import { twMerge } from "tailwind-merge"
 import { CgDatabase } from "react-icons/cg"
 import { TbDeviceDesktopCode } from "react-icons/tb"
-import useSkills from "@/store/skillsStore"
 import { SkillTypes } from "@/@types/SkillType"
 import SkillsItemHeader from "./SkillsItemHeader"
+import data from "@/data"
 
 type Props = {
   type: SkillTypes
 }
 
 const titles: Record<SkillTypes, string> = {
-  frontend: "Frontend",
-  backend: "Backend",
-  interpersonal: "Interpessoal",
+  frontend: data.skills.itemsTitle[0],
+  backend: data.skills.itemsTitle[1],
+  interpersonal: data.skills.itemsTitle[2],
 }
 
 const icons: Record<SkillTypes, React.ReactNode> = {
@@ -35,7 +34,6 @@ const openTimes: Record<SkillTypes, number> = {
 const SkillsList = ({ type }: Props) => {
   const [isOpen, setIsOpen] = useState(false)
   const [firstOpen, setFirstOpen] = useState(false)
-  const { skills } = useSkills()
 
   useEffect(() => {
     if (firstOpen) {
@@ -79,7 +77,7 @@ const SkillsList = ({ type }: Props) => {
           isOpen ? "max-h-[300px] pb-4" : "max-h-0"
         )}
       >
-        {skills
+        {data.skills.items
           .filter((item) => item.type === type)
           .map((skill, index) => (
             <div key={index} className="flex items-center gap-1 font-bold">

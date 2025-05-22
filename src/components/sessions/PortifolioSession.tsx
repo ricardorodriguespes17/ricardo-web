@@ -8,8 +8,9 @@ import Button from "../ui/Button"
 import { getGithubRepositories, getGithubUser } from "@/services/github"
 import { GithubUserType } from "@/@types/GithubUserType"
 import { RepositoryType } from "@/@types/RepositoryType"
+import data from "@/data"
 
-const githubUsername = "ricardorodriguespes17"
+const githubUsername = data.portifolio.githubUsername
 
 const PortifolioSession = () => {
   const [userData, setUserData] = useState<GithubUserType>()
@@ -36,11 +37,11 @@ const PortifolioSession = () => {
 
   return (
     <BaseSession id="portifolio">
-      <h2 className="mb-4">Portifólio</h2>
+      <h2 className="mb-4">{data.portifolio.title}</h2>
 
       <div className="flex w-full gap-4">
         <img
-          src="https://avatars.githubusercontent.com/u/39037180?v=4"
+          src={data.portifolio.avatar}
           alt="Foto do perfil do Github de Ricardo"
           className="w-20 aspect-square rounded-full"
         />
@@ -53,7 +54,9 @@ const PortifolioSession = () => {
         </div>
 
         <div className="flex flex-col text-sm text-gray-80  dark:text-gray-30">
-          <label>{repositories.length} repositórios públicos</label>
+          <label>
+            {repositories.length} {data.portifolio.repositoriesNumberText}
+          </label>
         </div>
       </div>
 

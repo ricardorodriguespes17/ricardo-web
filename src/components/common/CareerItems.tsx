@@ -1,12 +1,12 @@
 "use client"
 
 import useCareer from "@/store/careerStore"
-import { RiImageCircleFill } from "react-icons/ri"
 import { twMerge } from "tailwind-merge"
 import CareerItemLogo from "./CareerItemLogo"
+import data from "@/data"
 
 const CareerItems = () => {
-  const { careers, typeSelected } = useCareer()
+  const { typeSelected } = useCareer()
 
   return (
     <div
@@ -15,7 +15,7 @@ const CareerItems = () => {
         "h-fit max-h-[300px] overflow-auto"
       )}
     >
-      {careers
+      {data.career.items
         .filter((item) => item.type === typeSelected)
         .sort((a, b) => a.position - b.position)
         .map((item, index) => (
@@ -36,9 +36,6 @@ const CareerItems = () => {
               <strong className="text-sm text-gray-80 dark:text-gray-50">
                 {item.company}
               </strong>
-              <p className="text-sm text-gray-80 dark:text-gray-50">
-                {item.description}
-              </p>
             </div>
           </div>
         ))}

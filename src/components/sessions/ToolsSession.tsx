@@ -3,11 +3,12 @@ import BaseSession from "../layout/BaseSession"
 import Button from "../ui/Button"
 import { RiReactjsLine, RiTailwindCssFill } from "react-icons/ri"
 import { LiaGitAlt } from "react-icons/lia"
+import data from "@/data"
 
 const ToolsSession = () => {
   return (
     <BaseSession>
-      <h2 className="mb-6">Site feito com</h2>
+      <h2 className="mb-6">{data.tools.title}</h2>
 
       <div className="flex flex-wrap gap-4">
         <Button size="sm" href="https://nextjs.org/">

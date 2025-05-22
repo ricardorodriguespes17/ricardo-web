@@ -1,24 +1,22 @@
 import type { Metadata } from "next"
 import { Montserrat } from "next/font/google"
 import "./globals.css"
+import data from "@/data"
 
 export const metadata: Metadata = {
-  title: "Ricardo Rodrigues | Dev. Fullstack",
-  description: "Site de apresentação de Ricardo Rodrigues",
+  ...data.meta,
 }
 
 const font = Montserrat({
   subsets: ["latin"],
 })
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-br" className={font.className}>
       <body>{children}</body>
     </html>
   )
 }
+
+export default RootLayout

@@ -1,3 +1,4 @@
+import data from "@/data"
 import CareerItems from "../common/CareerItems"
 import CareerOptions from "../common/CareerOptions"
 import BaseSession from "../layout/BaseSession"
@@ -5,7 +6,7 @@ import BaseSession from "../layout/BaseSession"
 const CareerSession = () => {
   return (
     <BaseSession id="career">
-      <h2 className="mb-4">Carreira</h2>
+      <h2 className="mb-4">{data.career.title}</h2>
       <CareerOptions />
       <CareerItems />
     </BaseSession>
