@@ -51,6 +51,7 @@ const Drawer = () => {
             target="_self"
             size="sm"
             variant="plain"
+            onClick={() => setOpen(false)}
           >
             {item.label}
           </Button>
