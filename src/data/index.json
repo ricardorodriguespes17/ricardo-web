@@ -22,18 +22,18 @@
     ],
     "openGraph": {
       "title": "Ricardo Rodrigues | Desenvolvedor Frontend",
-      "description": "Site de apresentação de ${data.presentation.title}",
+      "description": "Site de apresentação de Ricardo",
       "type": "website",
       "locale": "pt_BR",
       "images": [
         {
-          "url": "https://avatars.githubusercontent.com/u/39037180?v=4",
+          "url": "/assets/rr.png",
           "width": 1200,
           "height": 630,
           "alt": "Ricardo Rodrigues"
         }
       ],
-      "countryName": "Brazil"
+      "countryName": "Brasil"
     },
     "icons": {
       "icon": "/favicon.ico"
