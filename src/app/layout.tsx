@@ -4,24 +4,7 @@ import "./globals.css"
 import data from "@/data"
 
 export const metadata: Metadata = {
-  title: `${data.presentation.title} | ${data.presentation.subtitle}`,
-  description: `Site de apresentação de ${data.presentation.title}`,
-  openGraph: {
-    title: `${data.presentation.title} | ${data.presentation.subtitle}`,
-    description: `Site de apresentação de ${data.presentation.title}`,
-    type: "website",
-    images: [
-      {
-        url: data.portifolio.avatar,
-        width: 1200,
-        height: 630,
-        alt: "Texto alternativo da imagem",
-      },
-    ],
-  },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  ...data.meta,
 }
 
 const font = Montserrat({
