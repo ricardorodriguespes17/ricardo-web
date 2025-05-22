@@ -6,6 +6,7 @@ import ButtonTheme from "../ui/ButtonTheme"
 import { twMerge } from "tailwind-merge"
 import ButtonDownloadCV from "../ui/ButtonDownloadCV"
 import { headerLinks } from "@/config/headerConfig"
+import data from "@/data"
 
 type Props = {
   children?: React.ReactNode
@@ -39,7 +40,7 @@ const Header = (props: Props) => {
       {props.children}
 
       <div className="hidden md:flex items-center gap-1">
-        {headerLinks.map((item, index) => (
+        {data.header.links.map((item, index) => (
           <Button
             key={index}
             href={`#${item.link}`}

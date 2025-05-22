@@ -2,9 +2,12 @@ import Image from "next/image"
 import BaseSession from "../layout/BaseSession"
 import AboutImg from "@/assets/about.jpg"
 import ButtonDownloadCV from "../ui/ButtonDownloadCV"
+import data from "@/data"
+
+const { title, paragraphs, birthdate, location } = data.about
 
 const calculateAge = () => {
-  const diff = Date.now() - new Date("1999-05-28").getTime()
+  const diff = Date.now() - new Date(birthdate).getTime()
   const age = new Date(diff).getUTCFullYear() - 1970
   return age
 }
@@ -26,19 +29,16 @@ const AboutSession = () => {
         </div>
 
         <div className="flex-1 flex flex-col gap-6">
-          <h2>Um pouco sobre mim...</h2>
+          <h2>{title}</h2>
 
           <div className="flex flex-col gap-2 h-full">
             <p>
-              Tenho {age} anos, moro em Vitória da Conquista, na Bahia. Estou
-              finalizando o curso de Ciência da Computação na UESB.
+              Tenho {age} anos, moro em {location}. Estou finalizando o curso de
+              Ciência da Computaçãoi na UESB
             </p>
-            <p>
-              Estou em busca de novos desafios na área da programação,
-              contribuindo cada vez mais para o avanço da tecnologia da
-              informação, pois acredito que isso tende a mudar cada vez mais o
-              mundo para melhor.
-            </p>
+            {paragraphs.map((item, index) => (
+              <p key={`paragraph-${index}`}>{item}</p>
+            ))}
           </div>
 
           <div className="flex items-end flex-1">

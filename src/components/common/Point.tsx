@@ -1,7 +1,28 @@
-const Point = () => {
+import { twMerge } from "tailwind-merge"
+
+type Props = {
+  available?: boolean
+}
+
+const Point = ({ available = true }: Props) => {
+  const pointsClassName = available
+    ? "bg-green-dark dark:bg-emerald-300"
+    : "bg-red-500"
+
   return (
-    <div className="bg-green-dark rounded-full w-3 aspect-square flex items-center justify-center">
-      <div className="bg-green-dark/90 rounded-full w-4 aspect-square animate-ping" />
+    <div
+      className={twMerge(
+        "rounded-full w-3 aspect-square flex items-center justify-center",
+        pointsClassName
+      )}
+    >
+      <div
+        className={twMerge(
+          "rounded-full w-4 aspect-square opacity-90",
+          available && "animate-ping",
+          pointsClassName
+        )}
+      />
     </div>
   )
 }
