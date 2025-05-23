@@ -7,6 +7,7 @@ type Props = {
   size?: "xs" | "sm" | "md" | "full"
   href?: string
   target?: HTMLAttributeAnchorTarget
+  onClick?: () => void
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 const variants = {
@@ -48,7 +49,12 @@ const Button = (props: Props) => {
 
   if (href) {
     return (
-      <Link className={className} href={href} target={target}>
+      <Link
+        className={className}
+        href={href}
+        target={target}
+        onClick={props.onClick}
+      >
         {rest.children}
       </Link>
     )
