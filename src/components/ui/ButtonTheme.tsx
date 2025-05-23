@@ -6,11 +6,11 @@ import useTheme from "@/store/themeStore"
 import { useEffect } from "react"
 
 const ButtonTheme = () => {
-  const { toggleTheme, themeMode } = useTheme()
+  const { toggleTheme, themeMode, updateDocumentTheme } = useTheme()
 
   useEffect(() => {
-    toggleTheme()
-  }, [])
+    updateDocumentTheme()
+  }, [themeMode])
 
   return (
     <Button variant="plain" onClick={toggleTheme}>
