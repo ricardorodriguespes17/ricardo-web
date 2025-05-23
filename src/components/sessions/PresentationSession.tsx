@@ -46,7 +46,8 @@ const PresentationSession = () => {
           </div>
 
           <Button
-            href="#contato"
+            href="#contact"
+            target="_self"
             className="hover:bg-blue-light hover:text-dark-100 mt-10 md:mt-5"
           >
             {contactButtonText}
