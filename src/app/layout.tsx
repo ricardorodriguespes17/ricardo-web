@@ -13,7 +13,7 @@ const font = Montserrat({
 
 function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-br" className={font.className}>
+    <html lang="pt-br" suppressHydrationWarning className={font.className}>
       <body>{children}</body>
     </html>
   )
