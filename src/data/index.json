@@ -237,7 +237,7 @@
     "title": "Site feito com"
   },
   "contacts": {
-    "text": "Sinta-se à vontade para entrar em contato comigo se estiver procurando um desenvolvedor, tiver alguma dúvida ou simplesmente quiser se conectar.",
+    "text": "Se você procura um desenvolvedor, tem perguntas ou quer apenas conversar, sinta-se à vontade para entrar em contato.",
     "items": [
       { "label": "ricardor662@gmail.com", "icon": "MdOutlineMail" },
       { "label": "+5577988792719", "icon": "FaWhatsapp" },
