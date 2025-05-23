@@ -9,18 +9,22 @@ type State = {
 
 type Actions = {
   toggleTheme: () => void
+  updateDocumentTheme: () => void
 }
 
 const useTheme = create<State & Actions>()(
   persist(
     (set, get) => ({
       themeMode: "light",
+      updateDocumentTheme: () => {
+        const root = window.document.documentElement
+        const themeMode = get().themeMode
+
+        if (themeMode === "dark") root.classList.add("dark")
+        else root.classList.remove("dark")
+      },
       toggleTheme: () => {
         const newMode = get().themeMode === "dark" ? "light" : "dark"
-
-        const root = window.document.documentElement
-        if (newMode === "dark") root.classList.add("dark")
-        else root.classList.remove("dark")
 
         set({ themeMode: newMode })
       },

@@ -34,7 +34,7 @@ const AboutSession = () => {
           <div className="flex flex-col gap-2 h-full">
             <p>
               Tenho {age} anos, moro em {location}. Estou finalizando o curso de
-              Ciência da Computaçãoi na UESB
+              Ciência da Computação na UESB
             </p>
             {paragraphs.map((item, index) => (
               <p key={`paragraph-${index}`}>{item}</p>
