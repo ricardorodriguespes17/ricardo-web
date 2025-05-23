@@ -5,7 +5,6 @@ import Button from "../ui/Button"
 import ButtonTheme from "../ui/ButtonTheme"
 import { twMerge } from "tailwind-merge"
 import ButtonDownloadCV from "../ui/ButtonDownloadCV"
-import { headerLinks } from "@/config/headerConfig"
 import data from "@/data"
 
 type Props = {
