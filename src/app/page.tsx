@@ -7,6 +7,7 @@ import PortifolioSession from "@/components/sessions/PortifolioSession"
 import PresentationSession from "@/components/sessions/PresentationSession"
 import SkillsSession from "@/components/sessions/SkillsSession"
 import ToolsSession from "@/components/sessions/ToolsSession"
+import Alert from "@/components/ui/Alert"
 import FloatingButton from "@/components/ui/FloatingButton"
 
 const HomePage = () => {
@@ -27,6 +28,7 @@ const HomePage = () => {
       <Footer />
 
       <FloatingButton />
+      <Alert />
     </div>
   )
 }
